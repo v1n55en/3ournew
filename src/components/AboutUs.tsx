@@ -13,14 +13,14 @@ const AboutUs = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h3 className="text-2xl font-bold text-black mb-4">Our Story</h3>
-            <p className="text-gray-700 mb-4">
+            <h3 className="text-2xl font-bold text-black mb-4 text-center">3Our Story</h3>
+            <p className="text-gray-700 mb-4 text-justify">
               Founded with a vision to bridge the gap between businesses and their digital potential, 3Our Agency has grown into a comprehensive digital marketing powerhouse. We started as a small team focused on social media management building a strong and consistent brand presence to supporting sales through the latest digital platforms.
             </p>
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700 mb-4 text-justify">
               The name "3Our" comes from the three founders, each representing a key pillar in our approach: creativity, strategy, and results. We believe that effective digital marketing requires all three elements working in harmony to deliver exceptional outcomes for our clients.
             </p>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-justify">
               Today, we're proud to have helped numerous businesses across various industries establish strong online presences and achieve their marketing goals.
             </p>
           </div>
