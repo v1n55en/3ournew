@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Check, Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Check, Send } from 'lucide-react';
 
 const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSecchayPvbmumQlYuCtTolMV4fuJdi1_teVcfukkv-sbaA1kg/formResponse";
 
