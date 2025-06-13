@@ -30,7 +30,7 @@ const Portfolio = () => {
       imageUrl: portfolio3,
     },
     {
-      title: "Social Media Management for Local F&B",
+      title: "Social Media Boosting for Local F&B",
       description: "We helped a local F&B increasing their online delivery food sales by 20% through targeted ads in creating engaging content and strategic ad placements.",
       imageUrl: portfolio4,
     }

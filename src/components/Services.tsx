@@ -258,7 +258,7 @@ const Services = () => {
           <ServicesCarousel services={socialMediaServices} title="Starter Plan Services" />
         </div>
 
-        <div className="mb-20 md:mb-16">
+        <div className="mb-10 md:mb-16">
           <ServicesCarousel services={buildPlanServices} title="Build Plan Services" />
         </div>
 
