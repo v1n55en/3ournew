@@ -257,9 +257,9 @@ const Services = () => {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center gap-4 mb-8">
+        <div className="flex justify-center gap-2 mb-8 flex-wrap">
           <button
-            className={`px-6 py-2 rounded-full font-bold transition-colors ${
+            className={`px-4 py-1 rounded-lg font-bold transition-colors text-sm md:text-base min-w-[180px] ${
               activeTab === 'starter'
                 ? 'bg-[#599d39] text-white'
                 : 'bg-gray-200 text-black hover:bg-gray-300'
@@ -269,7 +269,7 @@ const Services = () => {
             Starter Plan Services
           </button>
           <button
-            className={`px-6 py-2 rounded-full font-bold transition-colors ${
+            className={`px-4 py-1 rounded-lg font-bold transition-colors text-sm md:text-base min-w-[180px] ${
               activeTab === 'build'
                 ? 'bg-[#599d39] text-white'
                 : 'bg-gray-200 text-black hover:bg-gray-300'
@@ -279,7 +279,7 @@ const Services = () => {
             Build Plan Services
           </button>
           <button
-            className={`px-6 py-2 rounded-full font-bold transition-colors ${
+            className={`px-4 py-1 rounded-lg font-bold transition-colors text-sm md:text-base min-w-[180px] ${
               activeTab === 'amplify'
                 ? 'bg-[#599d39] text-white'
                 : 'bg-gray-200 text-black hover:bg-gray-300'
