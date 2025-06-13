@@ -250,7 +250,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="pb-4 bg-white">
+    <section id="services" className="pt-16 pb-4 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Services</h2>
