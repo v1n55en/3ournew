@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-black text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0">
+          <div className="md:w-1/2 mb-10 md:mb-0 order-2 md:order-1">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Elevate Your <span className="text-[#599d39]">Social Media</span> With AI-Powered
             </h1>
@@ -28,7 +28,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="md:w-1/2 flex justify-center">
+          <div className="md:w-1/2 flex justify-center order-1 md:order-2">
             <div className="relative">
               <div className="w-56 h-56 md:w-72 md:h-72 bg-[#599d39] rounded-full opacity-20 absolute -top-4 -left-4"></div>
               <div className="w-56 h-56 md:w-72 md:h-72 bg-white rounded-full opacity-10 absolute -bottom-4 -right-4"></div>
