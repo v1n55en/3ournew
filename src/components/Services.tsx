@@ -52,9 +52,12 @@ const ServiceCard = ({
           </li>
         ))}
       </ul>
-      <button className="w-full py-2 px-4 bg-[#599d39] hover:bg-[#4a8a2e] text-white font-medium rounded-lg transition-colors">
+      <a
+        href="#contact"
+        className="w-full block text-center py-2 px-4 bg-[#599d39] hover:bg-[#4a8a2e] text-white font-medium rounded-lg transition-colors"
+      >
         Get Started
-      </button>
+      </a>
     </div>
   );
 };
