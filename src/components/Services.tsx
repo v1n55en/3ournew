@@ -117,6 +117,8 @@ const ServicesCarousel = ({ services, title }: { services: ServiceCardProps[], t
 };
 
 const Services = () => {
+  const [activeTab, setActiveTab] = useState('starter');
+
   const socialMediaServices = [
     {
       category: "Social Media",
@@ -254,16 +256,51 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="mb-4 md:mb-16">
-          <ServicesCarousel services={socialMediaServices} title="Starter Plan Services" />
+        {/* Tab Navigation */}
+        <div className="flex justify-center gap-4 mb-8">
+          <button
+            className={`px-6 py-2 rounded-full font-bold transition-colors ${
+              activeTab === 'starter'
+                ? 'bg-[#599d39] text-white'
+                : 'bg-gray-200 text-black hover:bg-gray-300'
+            }`}
+            onClick={() => setActiveTab('starter')}
+          >
+            Starter Plan Services
+          </button>
+          <button
+            className={`px-6 py-2 rounded-full font-bold transition-colors ${
+              activeTab === 'build'
+                ? 'bg-[#599d39] text-white'
+                : 'bg-gray-200 text-black hover:bg-gray-300'
+            }`}
+            onClick={() => setActiveTab('build')}
+          >
+            Build Plan Services
+          </button>
+          <button
+            className={`px-6 py-2 rounded-full font-bold transition-colors ${
+              activeTab === 'amplify'
+                ? 'bg-[#599d39] text-white'
+                : 'bg-gray-200 text-black hover:bg-gray-300'
+            }`}
+            onClick={() => setActiveTab('amplify')}
+          >
+            Amplify Pack Services
+          </button>
         </div>
 
-        <div className="mb-4 md:mb-16">
-          <ServicesCarousel services={buildPlanServices} title="Build Plan Services" />
-        </div>
-
-        <div className="mb-4 md:mb-16">
-          <ServicesCarousel services={amplifyPackServices} title="Amplify Pack Service" />
+        {/* Tab Content */}
+        <div>
+          {activeTab === 'starter' && (
+            <ServicesCarousel services={socialMediaServices} title="Starter Plan Services" />
+          )}
+          {activeTab === 'build' && (
+            <ServicesCarousel services={buildPlanServices} title="Build Plan Services" />
+          )}
+          {activeTab === 'amplify' && (
+            <ServicesCarousel services={amplifyPackServices} title="Amplify Pack Service" />
+          )}
         </div>
       </div>
     </section>
