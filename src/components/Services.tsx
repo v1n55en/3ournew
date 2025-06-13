@@ -36,7 +36,7 @@ const ServiceCard = ({
         </span>
       </div>
       <p className="text-gray-600 mb-6">{description}</p>
-      <ul className="space-y-3 mb-6">
+      <ul className="space-y-3 mb-4">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start">
             <span className="mr-2 mt-1 text-[#599d39]">
