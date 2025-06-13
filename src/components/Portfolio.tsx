@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import portfolio1 from '../assets/images/logo CAW.png';
 import portfolio2 from '../assets/images/logo FBE.png';
@@ -47,6 +47,16 @@ const Portfolio = () => {
       prevSlide === 0 ? portfolioSlides.length - 1 : prevSlide - 1
     );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) =>
+        prev === portfolioSlides.length - 1 ? 0 : prev + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [portfolioSlides.length]);
   
   return (
     <section id="portfolio" className="py-16 bg-black text-white">
