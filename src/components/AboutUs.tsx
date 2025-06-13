@@ -75,16 +75,6 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-black mb-6">Ready to work with us?</h3>
-          <a 
-            href="#contact" 
-            className="px-6 py-3 bg-[#599d39] text-white font-medium rounded-lg hover:bg-[#4a8a2e] transition-colors inline-block"
-          >
-            Get in Touch
-          </a>
-        </div>
       </div>
     </section>
   );
