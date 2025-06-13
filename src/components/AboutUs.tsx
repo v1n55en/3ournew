@@ -38,31 +38,39 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4">
+        <div
+          className="
+            flex md:grid
+            grid-cols-1 md:grid-cols-3
+            gap-8 mb-16
+            overflow-x-auto md:overflow-visible
+            snap-x snap-mandatory
+            "
+        >
+          <div className="bg-gray-50 p-6 rounded-lg text-center min-w-[90vw] max-w-xs mx-auto md:min-w-0 md:max-w-none snap-center">
+            <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Users className="text-[#599d39]" />
             </div>
             <h4 className="text-xl font-bold text-black mb-2">Expert Team</h4>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-justify">
               Our team consists of experienced professionals with diverse backgrounds in digital marketing, design, development, and business strategy.
             </p>
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4">
+          <div className="bg-gray-50 p-6 rounded-lg text-center min-w-[90vw] max-w-xs mx-auto md:min-w-0 md:max-w-none snap-center">
+            <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Award className="text-[#599d39]" />
             </div>
             <h4 className="text-xl font-bold text-black mb-2">Quality Service</h4>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-justify">
               We pride ourselves on delivering high-quality services tailored to each client's unique needs and goals, ensuring maximum impact and ROI.
             </p>
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4">
+          <div className="bg-gray-50 p-6 rounded-lg text-center min-w-[90vw] max-w-xs mx-auto md:min-w-0 md:max-w-none snap-center">
+            <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4 mx-auto">
               <TrendingUp className="text-[#599d39]" />
             </div>
             <h4 className="text-xl font-bold text-black mb-2">Proven Results</h4>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-justify">
               Our data-driven approach has helped our clients achieve significant growth in their online presence, engagement, and conversion rates.
             </p>
           </div>
