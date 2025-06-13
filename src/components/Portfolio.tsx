@@ -25,11 +25,12 @@ const Portfolio = () => {
     },
     {
       title: "Social Media Boosting for F&B Brand",
-      description: "We helped a Social Media organic reach and ads awareness to increasing ER by 40%."
+      description: "We helped a Social Media organic reach and ads awareness to increasing ER by 40%.",
+      imageUrl: portfolio3,
     },
     {
       title: "Social Media Management for Local F&B",
-      description: "Managed social media accounts for a restaurant chain, creating engaging content that increased foot traffic and online orders by 120%."
+      description: "Managed social media accounts for a restaurant chain, creating engaging content that increased foot traffic and online orders by 120%.",
     }
   ];
   

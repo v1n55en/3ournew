@@ -78,10 +78,12 @@ const ServicesCarousel = ({ services, title }: { services: ServiceCardProps[], t
   
   return (
     <div className="relative">
-      <h3 className="inline-block rounded-full bg-[#000000] text-white px-6 py-2 text-2xl font-bold mb-6">
-        {title}
-        </h3>      
-        <div className="relative overflow-hidden">
+      <div className="text-center">
+        <h3 className="inline-block rounded-full bg-[#000000] text-white px-6 py-2 text-2xl font-bold mb-6">
+          {title}
+        </h3>
+      </div>
+      <div className="relative overflow-hidden">
         <div 
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * (100 / cardsToShow)}%)` }}
@@ -252,7 +254,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="mb-16">
+        <div className="mb-10 md:mb-16">
           <ServicesCarousel services={socialMediaServices} title="Starter Plan Services" />
         </div>
 
