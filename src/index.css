@@ -11,7 +11,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'League Spartan', sans-serif;
   color: var(--text);
   background-color: var(--background);
 }
@@ -42,4 +42,13 @@ body {
 
 .card-text {
   @apply text-gray-700;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-24px); }
+  100% { transform: translateY(0); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite !important;
 }

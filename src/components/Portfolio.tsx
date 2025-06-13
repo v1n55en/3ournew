@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
+import portfolio1 from '../assets/images/logo CAW.png';
+import portfolio2 from '../assets/images/logo FBE.png';
 interface PortfolioSlide {
   title: string;
   description: string;
@@ -12,24 +13,22 @@ const Portfolio = () => {
   
   const portfolioSlides: PortfolioSlide[] = [
     {
-      title: "Social Media Campaign for Fashion Brand",
-      description: "We helped a local fashion brand increase their Instagram followers by 200% and boost engagement rates through strategic content creation and targeted ads."
+      title: "Social Media Branding for Wellness Brand",
+      description: "We helped an Aussie Wellness brand increase their Instagram followers by 45% each quarter organicly through strategic content creation.",
+      imageUrl: portfolio1,
     },
     {
-      title: "E-commerce Website Development",
-      description: "Designed and developed a fully responsive e-commerce website with payment gateway integration, resulting in a 150% increase in online sales."
+      title: "Social Media Campaign for New Essence Brand",
+      description: "We designed and created a fully creative ads for their CPAS and getting ROAS up to 5x from zero.",
+      imageUrl: portfolio2,
     },
     {
-      title: "SEO Strategy for Tech Startup",
-      description: "Implemented a comprehensive SEO strategy that improved organic search rankings and increased website traffic by 180% within 3 months."
+      title: "Social Media Boosting for F&B Brand",
+      description: "We helped a Social Media organic reach and ads awareness to increasing ER by 40%."
     },
     {
       title: "Social Media Management for Restaurant Chain",
       description: "Managed social media accounts for a restaurant chain, creating engaging content that increased foot traffic and online orders by 120%."
-    },
-    {
-      title: "CRM Implementation for Service Business",
-      description: "Developed and implemented a custom CRM solution with AI integration, improving customer retention rates by 40%."
     }
   ];
   

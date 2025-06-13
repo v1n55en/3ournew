@@ -2,21 +2,39 @@ import { useState } from 'react';
 import { Check, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ServiceCardProps {
+  category?: string;
   title: string;
   description: string;
   features: string[];
   isPopular?: boolean;
+  showPopularBadge?: boolean;
 }
 
-const ServiceCard = ({ title, description, features, isPopular = false }: ServiceCardProps) => {
+const ServiceCard = ({
+  category,
+  title,
+  description,
+  features,
+  isPopular = false,
+  showPopularBadge = true, // default true
+}: ServiceCardProps & { showPopularBadge?: boolean }) => {
   return (
     <div className={`bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 ${isPopular ? 'border-2 border-[#599d39] relative' : ''}`}>
-      {isPopular && (
+      {isPopular && showPopularBadge && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#599d39] text-white px-4 py-1 rounded-full text-sm font-medium">
           Popular Choice
         </div>
       )}
-      <h3 className="text-xl font-bold text-black mb-3">{title}</h3>
+      <div className="mb-3 text-center">
+        {category && (
+          <div className="text-base font-bold text-black mb-1">{category}</div>
+        )}
+        <span
+          className={`inline-block rounded-full px-4 py-1 font-bold text-black text-base ${getBadgeClass(title)}`}
+        >
+          {title}
+        </span>
+      </div>
       <p className="text-gray-600 mb-6">{description}</p>
       <ul className="space-y-3 mb-6">
         {features.map((feature, index) => (
@@ -24,7 +42,13 @@ const ServiceCard = ({ title, description, features, isPopular = false }: Servic
             <span className="mr-2 mt-1 text-[#599d39]">
               <Check size={16} />
             </span>
-            <span className="text-gray-700">{feature}</span>
+            <span className={
+              feature === "Rp. 500k monthly ad credit"
+              ? "inline-block bg-pink-200 text-pink-700 px-3 py-1 rounded-full font-semibold"
+              : "text-gray-700"
+            }>
+              {feature}
+            </span>
           </li>
         ))}
       </ul>
@@ -54,8 +78,10 @@ const ServicesCarousel = ({ services, title }: { services: ServiceCardProps[], t
   
   return (
     <div className="relative">
-      <h3 className="text-2xl font-bold text-black mb-6">{title}</h3>
-      <div className="relative overflow-hidden">
+      <h3 className="inline-block rounded-full bg-[#000000] text-white px-6 py-2 text-2xl font-bold mb-6">
+        {title}
+        </h3>      
+        <div className="relative overflow-hidden">
         <div 
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * (100 / cardsToShow)}%)` }}
@@ -91,7 +117,8 @@ const ServicesCarousel = ({ services, title }: { services: ServiceCardProps[], t
 const Services = () => {
   const socialMediaServices = [
     {
-      title: "Social Media Branding",
+      category: "Social Media",
+      title: "Branding",
       description: "Professional branding design for your Instagram business profile.",
       features: [
         "Profile optimization",
@@ -102,20 +129,22 @@ const Services = () => {
       ]
     },
     {
-      title: "Social Media Boosting",
+      category: "Social Media",
+      title: "Boosting",
       description: "Enhance your Instagram presence and drive sales with our boosting package.",
       features: [
         "Profile optimization",
         "Visual identity design",
         "Content strategy",
-        "Rp 500k monthly ad credit",
+        "Rp. 500k monthly ad credit",
         "Sales conversion tracking",
         "Monthly performance report"
       ],
       isPopular: true
     },
     {
-      title: "Social Media Creators",
+      category: "Social Media",
+      title: "Creators",
       description: "Elevate your content with professional creators and talent management.",
       features: [
         "Profile optimization",
@@ -124,35 +153,41 @@ const Services = () => {
         "Professional photoshoots",
         "Content calendar",
         "Monthly performance report"
-      ]
+      ],
+      isPopular: false
+
     },
     {
-      title: "Social Media Combo",
+      category: "Social Media",
+      title: "Combo",
       description: "Our complete solution combining branding, content creation, and sales boosting.",
       features: [
         "Profile optimization",
         "Visual identity design",
         "Content creation with talent",
-        "Rp 500k monthly ad credit",
+        "Rp. 500k monthly ad credit",
         "Sales conversion tracking",
         "Priority support",
         "Comprehensive monthly report"
-      ]
+      ],
+      isPopular: true
     }
   ];
 
-  const projectBaseServices = [
+  const buildPlanServices = [
     {
-      title: "Web Development",
-      description: "Custom website development from design to payment gateway integration.",
+      title: "AI Web Development",
+      description: "Custom website development from AI design choice to payment gateway integration.",
       features: [
-        "Responsive design",
+        "AI choice design",
         "SEO optimization",
         "Payment gateway integration",
         "Content management system",
         "Analytics setup",
         "3 months support"
-      ]
+      ],
+      isPopular: true,
+      showPopularBadge: true,
     },
     {
       title: "SEO Management",
@@ -165,7 +200,8 @@ const Services = () => {
         "Monthly reporting",
         "Competitor analysis"
       ],
-      isPopular: true
+      isPopular: false,
+      showPopularBadge: false,
     },
     {
       title: "CRM Management",
@@ -181,6 +217,31 @@ const Services = () => {
     }
   ];
 
+  const amplifyPackServices = [
+    {
+      title: "KOL Management",
+      description: "Professional KOL (Key Opinion Leader) management to boost your brand awareness.",
+      features: [
+        "KOL selection",
+        "Campaign planning",
+        "Performance tracking"
+      ],
+      isPopular: false,
+      showPopularBadge: false,
+    },
+    {
+      title: "Ads Management",
+      description: "Comprehensive ads management for maximum reach and conversion.",
+      features: [
+        "Ads strategy",
+        "Budget optimization",
+        "Monthly reporting"
+      ],
+      isPopular: true,
+      showPopularBadge: true,
+    }
+  ];
+
   return (
     <section id="services" className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -192,15 +253,34 @@ const Services = () => {
         </div>
 
         <div className="mb-16">
-          <ServicesCarousel services={socialMediaServices} title="Social Media Services" />
+          <ServicesCarousel services={socialMediaServices} title="Starter Plan Services" />
         </div>
 
         <div>
-          <ServicesCarousel services={projectBaseServices} title="Project-Based Services" />
+          <ServicesCarousel services={buildPlanServices} title="Build Plan Services" />
+        </div>
+
+        <div className="mt-16">
+          <ServicesCarousel services={amplifyPackServices} title="Amplify Pack Service" />
         </div>
       </div>
     </section>
   );
+};
+
+const getBadgeClass = (title: string) => {
+  switch (title) {
+    case "Branding":
+      return "bg-[#8de0ff] text-black";
+    case "Creators":
+      return "bg-[#ff914d] text-black";
+    case "Boosting":
+      return "bg-[#ffde59] text-black";
+    case "Combo":
+      return "bg-[#f2f2f2] text-black border border-gray-300";
+    default:
+      return "bg-gray-200 text-black";
+  }
 };
 
 export default Services;

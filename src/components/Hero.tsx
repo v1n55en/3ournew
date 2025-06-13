@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import logo from '../assets/images/logo.png';
+import heroImage from '../assets/images/orang.png';
 
 const Hero = () => {
   return (
@@ -8,10 +8,10 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Elevate Your <span className="text-[#599d39]">Social Media</span> Presence
+              Elevate Your <span className="text-[#599d39]">Social Media</span> With AI-Powered
             </h1>
             <p className="text-lg text-gray-300 mb-8">
-              3Our Agency helps businesses grow their online presence through strategic social media management, web development, and digital marketing solutions.
+              3Our Agency helps businesses grow their online presence through strategic social media into sales with digital marketing solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
@@ -30,12 +30,14 @@ const Hero = () => {
           </div>
           <div className="md:w-1/2 flex justify-center">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 bg-[#599d39] rounded-full opacity-20 absolute -top-6 -left-6"></div>
-              <div className="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full opacity-10 absolute -bottom-6 -right-6"></div>
-              <div className="relative z-10 bg-gray-900 p-4 rounded-xl shadow-xl">
-                <div className="w-64 h-64 md:w-80 md:h-80 bg-gray-800 rounded-lg flex items-center justify-center">
-                  <img src={logo} alt="3Our Agency" className="w-40 h-auto" />
-                </div>
+              <div className="w-56 h-56 md:w-72 md:h-72 bg-[#599d39] rounded-full opacity-20 absolute -top-4 -left-4"></div>
+              <div className="w-56 h-56 md:w-72 md:h-72 bg-white rounded-full opacity-10 absolute -bottom-4 -right-4"></div>
+              <div className="relative z-10 flex items-center justify-center">
+                <img
+                  src={heroImage}
+                  alt="People Pointing"
+                  className="w-72 md:w-[22rem] h-auto animate-float"
+                />
               </div>
             </div>
           </div>

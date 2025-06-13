@@ -4,7 +4,7 @@ const CallToAction = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-2/3 mb-8 md:mb-0">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your social media presence?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your social media into sales?</h2>
             <p className="text-xl text-white/90">
               Let's discuss how 3Our Agency can help your business grow online.
             </p>

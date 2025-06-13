@@ -1,11 +1,11 @@
 import { Users, Award, TrendingUp } from 'lucide-react';
-
+import teamImage from '../assets/images/team.jpg';
 const AboutUs = () => {
   return (
     <section id="about" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">About 3Our Agency</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">About 3Our</h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             We are a dedicated team of digital marketing experts passionate about helping businesses thrive in the digital landscape.
           </p>
@@ -15,10 +15,10 @@ const AboutUs = () => {
           <div>
             <h3 className="text-2xl font-bold text-black mb-4">Our Story</h3>
             <p className="text-gray-700 mb-4">
-              Founded with a vision to bridge the gap between businesses and their digital potential, 3Our Agency has grown into a comprehensive digital marketing powerhouse. We started as a small team focused on social media management and have expanded our services to include web development, SEO, and CRM solutions.
+              Founded with a vision to bridge the gap between businesses and their digital potential, 3Our Agency has grown into a comprehensive digital marketing powerhouse. We started as a small team focused on social media management building a strong and consistent brand presence to supporting sales through the latest digital platforms.
             </p>
             <p className="text-gray-700 mb-4">
-              Our name "3Our" represents our three core values: creativity, strategy, and results. We believe that effective digital marketing requires all three elements working in harmony to deliver exceptional outcomes for our clients.
+              The name "3Our" comes from the three founders, each representing a key pillar in our approach: creativity, strategy, and results. We believe that effective digital marketing requires all three elements working in harmony to deliver exceptional outcomes for our clients.
             </p>
             <p className="text-gray-700">
               Today, we're proud to have helped numerous businesses across various industries establish strong online presences and achieve their marketing goals.
@@ -28,9 +28,11 @@ const AboutUs = () => {
             <div className="relative">
               <div className="w-full h-64 bg-[#599d39] rounded-lg opacity-10 absolute -top-4 -left-4"></div>
               <div className="relative z-10 bg-white p-4 rounded-lg shadow-lg">
-                <div className="w-full h-56 bg-gray-200 rounded-lg flex items-center justify-center">
-                  <span className="text-xl font-semibold text-gray-500">Our Team Image</span>
-                </div>
+                <img 
+                  src={teamImage} 
+                  alt="Our Team" 
+                  className="w-full h-64 object-cover rounded-lg mb-4"
+                />
               </div>
             </div>
           </div>
