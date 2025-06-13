@@ -12,7 +12,7 @@ const AboutUs = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
+          <div className="order-2 md:order-1">
             <h3 className="text-2xl font-bold text-black mb-4 text-center">3Our Story</h3>
             <p className="text-gray-700 mb-4 text-justify">
               Founded with a vision to bridge the gap between businesses and their digital potential, 3Our Agency has grown into a comprehensive digital marketing powerhouse. We started as a small team focused on social media management building a strong and consistent brand presence to supporting sales through the latest digital platforms.
@@ -24,7 +24,7 @@ const AboutUs = () => {
               Today, we're proud to have helped numerous businesses across various industries establish strong online presences and achieve their marketing goals.
             </p>
           </div>
-          <div className="bg-gray-100 rounded-lg p-8">
+          <div className="bg-gray-100 rounded-lg p-8 order-1 md:order-2">
             <div className="relative">
               <div className="w-full h-64 bg-[#599d39] rounded-lg opacity-10 absolute -top-4 -left-4"></div>
               <div className="relative z-10 bg-white p-4 rounded-lg shadow-lg">
