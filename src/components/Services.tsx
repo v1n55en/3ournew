@@ -256,11 +256,11 @@ const Services = () => {
           <ServicesCarousel services={socialMediaServices} title="Starter Plan Services" />
         </div>
 
-        <div>
+        <div className="mb-16">
           <ServicesCarousel services={buildPlanServices} title="Build Plan Services" />
         </div>
 
-        <div className="mt-16">
+        <div className="mb-16">
           <ServicesCarousel services={amplifyPackServices} title="Amplify Pack Service" />
         </div>
       </div>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import portfolio1 from '../assets/images/logo CAW.png';
 import portfolio2 from '../assets/images/logo FBE.png';
+import portfolio3 from '../assets/images/logo WBJ.png';
 interface PortfolioSlide {
   title: string;
   description: string;
@@ -27,7 +28,7 @@ const Portfolio = () => {
       description: "We helped a Social Media organic reach and ads awareness to increasing ER by 40%."
     },
     {
-      title: "Social Media Management for Restaurant Chain",
+      title: "Social Media Management for Local F&B",
       description: "Managed social media accounts for a restaurant chain, creating engaging content that increased foot traffic and online orders by 120%."
     }
   ];
@@ -80,18 +81,18 @@ const Portfolio = () => {
           
           <button 
             onClick={prevSlide}
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#599d39] rounded-full p-3 shadow-lg text-white hover:bg-[#4a8a2e] z-10"
+            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#599d39] rounded-full p-2 shadow-lg text-white hover:bg-[#4a8a2e] z-10"
             aria-label="Previous slide"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={15} /> 
           </button>
           
           <button 
             onClick={nextSlide}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#599d39] rounded-full p-3 shadow-lg text-white hover:bg-[#4a8a2e] z-10"
+            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#599d39] rounded-full p-2 shadow-lg text-white hover:bg-[#4a8a2e] z-10"
             aria-label="Next slide"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={15} />
           </button>
           
           <div className="flex justify-center mt-6 space-x-2">
