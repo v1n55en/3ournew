@@ -79,7 +79,7 @@ const ServicesCarousel = ({ services, title }: { services: ServiceCardProps[], t
   return (
     <div className="relative">
       <div className="text-center">
-        <h3 className="inline-block rounded-full bg-[#000000] text-white px-6 py-2 text-2xl font-bold mb-4 md:mb-6">
+        <h3 className="inline-block rounded-full bg-[#000000] text-white px-6 py-2 text-2xl font-bold mt-2 md:mt-6 mb-4 md:mb-6">
           {title}
         </h3>
       </div>
@@ -254,15 +254,15 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="mb-10 md:mb-16">
+        <div className="mb-4 md:mb-16">
           <ServicesCarousel services={socialMediaServices} title="Starter Plan Services" />
         </div>
 
-        <div className="mb-10 md:mb-16">
+        <div className="mb-4 md:mb-16">
           <ServicesCarousel services={buildPlanServices} title="Build Plan Services" />
         </div>
 
-        <div className="mb-10 md:mb-16">
+        <div className="mb-4 md:mb-16">
           <ServicesCarousel services={amplifyPackServices} title="Amplify Pack Service" />
         </div>
       </div>
