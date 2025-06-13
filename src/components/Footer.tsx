@@ -38,11 +38,23 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail size={18} className="mr-2 mt-1 text-[#599d39]" />
-                <span className="text-gray-400">3our.id@gmail.com</span>
+                <a
+                  href="mailto:3our.id@gmail.com"
+                  className="text-gray-400 hover:underline"
+                >
+                  3our.id@gmail.com
+                </a>
               </li>
               <li className="flex items-start">
                 <Phone size={18} className="mr-2 mt-1 text-[#599d39]" />
-                <span className="text-gray-400">+62 851 7964 2520</span>
+                <a
+                  href="https://wa.me/6285179642520"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:underline"
+                >
+                  +62 851 7964 2520
+                </a>
               </li>
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-[#599d39]" />
