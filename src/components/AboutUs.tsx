@@ -2,7 +2,7 @@ import { Users, Award, TrendingUp } from 'lucide-react';
 import teamImage from '../assets/images/team.jpg';
 const AboutUs = () => {
   return (
-    <section id="about" className="pt-6 pb-16 bg-white">
+    <section id="about" className="pt-2 pb-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">About 3Our</h2>
