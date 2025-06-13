@@ -10,7 +10,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
               Elevate Your <span className="text-[#599d39]">Social Media</span> With AI-Powered
             </h1>
-            <div className="relative z-10 flex items-center justify-center mb-6">
+            <div className="relative z-10 flex items-center justify-center mb-6 md:hidden">
               <div className="w-56 h-56 md:w-72 md:h-72 bg-[#599d39] rounded-full opacity-20 absolute -top-4 -left-4"></div>
               <div className="w-56 h-56 md:w-72 md:h-72 bg-white rounded-full opacity-10 absolute -bottom-4 -right-4"></div>
               <img
@@ -37,7 +37,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          {/* Hapus kolom gambar di bawah ini pada mobile */}
+          {/* Hero image hanya di desktop */}
           <div className="hidden md:flex md:w-1/2 justify-center order-1 md:order-2">
             <div className="relative">
               <div className="w-56 h-56 md:w-72 md:h-72 bg-[#599d39] rounded-full opacity-20 absolute -top-4 -left-4"></div>
