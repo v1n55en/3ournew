@@ -257,37 +257,39 @@ const Services = () => {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center gap-2 mb-8 flex-wrap">
-          <button
-            className={`px-4 py-1 rounded-lg font-bold transition-colors text-sm md:text-base min-w-[180px] ${
-              activeTab === 'starter'
-                ? 'bg-[#599d39] text-white'
-                : 'bg-gray-200 text-black hover:bg-gray-300'
-            }`}
-            onClick={() => setActiveTab('starter')}
-          >
-            Starter Plan Services
-          </button>
-          <button
-            className={`px-4 py-1 rounded-lg font-bold transition-colors text-sm md:text-base min-w-[180px] ${
-              activeTab === 'build'
-                ? 'bg-[#599d39] text-white'
-                : 'bg-gray-200 text-black hover:bg-gray-300'
-            }`}
-            onClick={() => setActiveTab('build')}
-          >
-            Build Plan Services
-          </button>
-          <button
-            className={`px-4 py-1 rounded-lg font-bold transition-colors text-sm md:text-base min-w-[180px] ${
-              activeTab === 'amplify'
-                ? 'bg-[#599d39] text-white'
-                : 'bg-gray-200 text-black hover:bg-gray-300'
-            }`}
-            onClick={() => setActiveTab('amplify')}
-          >
-            Amplify Pack Services
-          </button>
+        <div className="flex justify-center mb-8">
+          <div className="flex overflow-x-auto whitespace-nowrap rounded-xl bg-gray-200">
+            <button
+              className={`px-4 py-1 font-bold transition-colors text-sm md:text-base min-w-[180px] 
+                ${activeTab === 'starter'
+                  ? 'bg-[#599d39] text-white'
+                  : 'text-black hover:bg-gray-300'}
+                rounded-l-lg`}
+              onClick={() => setActiveTab('starter')}
+            >
+              Starter Plan Services
+            </button>
+            <button
+              className={`px-4 py-1 font-bold transition-colors text-sm md:text-base min-w-[180px] 
+                ${activeTab === 'build'
+                  ? 'bg-[#599d39] text-white'
+                  : 'text-black hover:bg-gray-300'}
+                `}
+              onClick={() => setActiveTab('build')}
+            >
+              Build Plan Services
+            </button>
+            <button
+              className={`px-4 py-1 font-bold transition-colors text-sm md:text-base min-w-[180px] 
+                ${activeTab === 'amplify'
+                  ? 'bg-[#599d39] text-white'
+                  : 'text-black hover:bg-gray-300'}
+                rounded-r-lg`}
+              onClick={() => setActiveTab('amplify')}
+            >
+              Amplify Pack Services
+            </button>
+          </div>
         </div>
 
         {/* Tab Content */}
