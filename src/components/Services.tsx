@@ -258,9 +258,9 @@ const Services = () => {
 
         {/* Tab Navigation */}
         <div className="flex justify-center mb-8">
-          <div className="flex overflow-x-auto whitespace-nowrap rounded-xl bg-gray-200">
+          <div className="flex w-full max-w-md md:max-w-none overflow-x-auto whitespace-nowrap rounded-xl bg-gray-200">
             <button
-              className={`px-4 py-1 font-bold transition-colors text-sm md:text-base min-w-[180px] 
+              className={`flex-1 px-4 py-2 font-bold transition-colors text-sm md:text-base 
                 ${activeTab === 'starter'
                   ? 'bg-[#599d39] text-white'
                   : 'text-black hover:bg-gray-300'}
@@ -270,7 +270,7 @@ const Services = () => {
               Starter Business
             </button>
             <button
-              className={`px-4 py-1 font-bold transition-colors text-sm md:text-base min-w-[180px] 
+              className={`flex-1 px-4 py-2 font-bold transition-colors text-sm md:text-base 
                 ${activeTab === 'build'
                   ? 'bg-[#599d39] text-white'
                   : 'text-black hover:bg-gray-300'}
@@ -280,7 +280,7 @@ const Services = () => {
               Build Business
             </button>
             <button
-              className={`px-4 py-1 font-bold transition-colors text-sm md:text-base min-w-[180px] 
+              className={`flex-1 px-4 py-2 font-bold transition-colors text-sm md:text-base 
                 ${activeTab === 'amplify'
                   ? 'bg-[#599d39] text-white'
                   : 'text-black hover:bg-gray-300'}
