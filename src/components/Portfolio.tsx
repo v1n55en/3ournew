@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import portfolio1 from '../assets/images/logo CAW.png';
 import portfolio2 from '../assets/images/logo FBE.png';
-import portfolio3 from '../assets/images/logo WBJ.png';
+import portfolio3 from '../assets/images/logo KPB.png';
+import portfolio4 from '../assets/images/logo WBJ.png';
 interface PortfolioSlide {
   title: string;
   description: string;
@@ -30,7 +31,8 @@ const Portfolio = () => {
     },
     {
       title: "Social Media Management for Local F&B",
-      description: "Managed social media accounts for a restaurant chain, creating engaging content that increased foot traffic and online orders by 120%.",
+      description: "We helped a local F&B increasing their online delivery food sales by 20% through targeted ads in creating engaging content and strategic ad placements.",
+      imageUrl: portfolio4,
     }
   ];
   

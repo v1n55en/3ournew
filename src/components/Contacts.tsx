@@ -143,7 +143,7 @@ const ContactForm = () => {
               value={formData.social}
               onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#599d39]"
-              placeholder="https://instagram.com/yourusername"
+              placeholder="https://instagram.com/username"
               required
             />
           </div>
@@ -200,7 +200,12 @@ const Contact = () => {
                   <Mail className="mr-4 mt-1 text-[#599d39]" />
                   <div>
                     <h4 className="font-semibold mb-1">Email Us</h4>
-                    <p className="text-gray-300">3our.id@gmail.com</p>
+                    <a
+                      href="mailto:3our.id@gmail.com"
+                      className="text-gray-300 hover:underline break-all"
+                    >
+                      3our.id@gmail.com
+                    </a>
                   </div>
                 </div>
                 
@@ -208,7 +213,14 @@ const Contact = () => {
                   <Phone className="mr-4 mt-1 text-[#599d39]" />
                   <div>
                     <h4 className="font-semibold mb-1">Contact Us</h4>
-                    <p className="text-gray-300">+62 851 7964 2520</p>
+                    <a
+                      href="https://wa.me/6285179642520"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-300 hover:underline"
+                    >
+                      +62 851 7964 2520
+                    </a>
                   </div>
                 </div>
                 
@@ -217,7 +229,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold mb-1">3Our Location</h4>
                     <p className="text-gray-300">
-                      3Our Agency<br />
+                      3Our Indonesia<br />
                       West Jakarta, Indonesia
                     </p>
                   </div>
