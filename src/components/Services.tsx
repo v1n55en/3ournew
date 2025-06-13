@@ -267,7 +267,7 @@ const Services = () => {
                 rounded-l-lg`}
               onClick={() => setActiveTab('starter')}
             >
-              Starter Plan Services
+              Starter Business
             </button>
             <button
               className={`px-4 py-1 font-bold transition-colors text-sm md:text-base min-w-[180px] 
@@ -277,7 +277,7 @@ const Services = () => {
                 `}
               onClick={() => setActiveTab('build')}
             >
-              Build Plan Services
+              Build Business
             </button>
             <button
               className={`px-4 py-1 font-bold transition-colors text-sm md:text-base min-w-[180px] 
@@ -287,7 +287,7 @@ const Services = () => {
                 rounded-r-lg`}
               onClick={() => setActiveTab('amplify')}
             >
-              Amplify Pack Services
+              Amplify Business
             </button>
           </div>
         </div>
