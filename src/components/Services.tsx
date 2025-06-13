@@ -19,7 +19,7 @@ const ServiceCard = ({
   showPopularBadge = true, // default true
 }: ServiceCardProps & { showPopularBadge?: boolean }) => {
   return (
-    <div className={`bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 ${isPopular ? 'border-2 border-[#599d39] relative' : ''}`}>
+    <div className={`bg-white rounded-xl shadow-lg p-4 md:p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 ${isPopular ? 'border-2 border-[#599d39] relative' : ''}`}>
       {isPopular && showPopularBadge && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#599d39] text-white px-4 py-1 rounded-full text-sm font-medium">
           Popular Choice
@@ -79,7 +79,7 @@ const ServicesCarousel = ({ services, title }: { services: ServiceCardProps[], t
   return (
     <div className="relative">
       <div className="text-center">
-        <h3 className="inline-block rounded-full bg-[#000000] text-white px-6 py-2 text-2xl font-bold mb-6">
+        <h3 className="inline-block rounded-full bg-[#000000] text-white px-6 py-2 text-2xl font-bold mb-4 md:mb-6">
           {title}
         </h3>
       </div>
