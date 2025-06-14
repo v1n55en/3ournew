@@ -64,28 +64,35 @@ const AboutUs = () => {
         </div>
 
         {/* Carousel untuk mobile */}
-        <div className="flex md:hidden items-center justify-center gap-4 mb-8">
-          <button
-            onClick={prevCard}
-            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300"
-            aria-label="Previous"
-          >
-            <ChevronLeft />
-          </button>
-          <div className="bg-gray-50 p-6 rounded-lg text-center min-w-[90vw] max-w-xs mx-auto">
-            <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-              {expertCards[activeIndex].icon}
+        <div className="relative flex md:hidden justify-center mb-8">
+          <div className="bg-gray-50 p-6 rounded-lg text-center min-w-[90vw] max-w-xs mx-auto relative">
+            {/* Tombol kiri */}
+            <button
+              onClick={prevCard}
+              className="absolute left-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-gray-200 hover:bg-gray-300 shadow"
+              aria-label="Previous"
+              style={{ zIndex: 2 }}
+            >
+              <ChevronLeft />
+            </button>
+            {/* Isi card */}
+            <div className="flex flex-col items-center">
+              <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                {expertCards[activeIndex].icon}
+              </div>
+              <h4 className="text-xl font-bold text-black mb-2">{expertCards[activeIndex].title}</h4>
+              <p className="text-gray-700 text-justify">{expertCards[activeIndex].desc}</p>
             </div>
-            <h4 className="text-xl font-bold text-black mb-2">{expertCards[activeIndex].title}</h4>
-            <p className="text-gray-700 text-justify">{expertCards[activeIndex].desc}</p>
+            {/* Tombol kanan */}
+            <button
+              onClick={nextCard}
+              className="absolute right-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-gray-200 hover:bg-gray-300 shadow"
+              aria-label="Next"
+              style={{ zIndex: 2 }}
+            >
+              <ChevronRight />
+            </button>
           </div>
-          <button
-            onClick={nextCard}
-            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300"
-            aria-label="Next"
-          >
-            <ChevronRight />
-          </button>
         </div>
 
         {/* Grid untuk desktop */}
