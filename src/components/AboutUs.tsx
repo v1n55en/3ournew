@@ -1,6 +1,31 @@
-import { Users, Award, TrendingUp } from 'lucide-react';
+import { useState } from "react";
+import { Users, Award, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
 import teamImage from '../assets/images/team.jpg';
+
+const expertCards = [
+  {
+    icon: <Users className="text-[#599d39]" />,
+    title: "Expert Team",
+    desc: "Our team consists of experienced professionals with diverse backgrounds in digital marketing, design, development, and business strategy.",
+  },
+  {
+    icon: <Award className="text-[#599d39]" />,
+    title: "Quality Service",
+    desc: "We pride ourselves on delivering high-quality services tailored to each client's unique needs and goals, ensuring maximum impact and ROI.",
+  },
+  {
+    icon: <TrendingUp className="text-[#599d39]" />,
+    title: "Proven Results",
+    desc: "Our data-driven approach has helped our clients achieve significant growth in their online presence, engagement, and conversion rates.",
+  },
+];
+
 const AboutUs = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const prevCard = () => setActiveIndex((prev) => (prev === 0 ? expertCards.length - 1 : prev - 1));
+  const nextCard = () => setActiveIndex((prev) => (prev === expertCards.length - 1 ? 0 : prev + 1));
+
   return (
     <section id="about" className="pt-4 pb-16 bg-white">
       <div className="container mx-auto px-4">
@@ -38,42 +63,42 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div
-          className="
-            flex md:grid
-            grid-cols-1 md:grid-cols-3
-            gap-8 mb-16
-            overflow-x-auto md:overflow-visible
-            snap-x snap-mandatory
-            "
-        >
-          <div className="bg-gray-50 p-6 rounded-lg text-center min-w-[90vw] max-w-xs mx-auto md:min-w-0 md:max-w-none snap-center">
+        {/* Carousel untuk mobile */}
+        <div className="flex md:hidden items-center justify-center gap-4 mb-8">
+          <button
+            onClick={prevCard}
+            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300"
+            aria-label="Previous"
+          >
+            <ChevronLeft />
+          </button>
+          <div className="bg-gray-50 p-6 rounded-lg text-center min-w-[90vw] max-w-xs mx-auto">
             <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-              <Users className="text-[#599d39]" />
+              {expertCards[activeIndex].icon}
             </div>
-            <h4 className="text-xl font-bold text-black mb-2">Expert Team</h4>
-            <p className="text-gray-700 text-justify">
-              Our team consists of experienced professionals with diverse backgrounds in digital marketing, design, development, and business strategy.
-            </p>
+            <h4 className="text-xl font-bold text-black mb-2">{expertCards[activeIndex].title}</h4>
+            <p className="text-gray-700 text-justify">{expertCards[activeIndex].desc}</p>
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg text-center min-w-[90vw] max-w-xs mx-auto md:min-w-0 md:max-w-none snap-center">
-            <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-              <Award className="text-[#599d39]" />
+          <button
+            onClick={nextCard}
+            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300"
+            aria-label="Next"
+          >
+            <ChevronRight />
+          </button>
+        </div>
+
+        {/* Grid untuk desktop */}
+        <div className="hidden md:grid grid-cols-3 gap-8 mb-16">
+          {expertCards.map((card, idx) => (
+            <div key={idx} className="bg-gray-50 p-6 rounded-lg text-center">
+              <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                {card.icon}
+              </div>
+              <h4 className="text-xl font-bold text-black mb-2">{card.title}</h4>
+              <p className="text-gray-700 text-justify">{card.desc}</p>
             </div>
-            <h4 className="text-xl font-bold text-black mb-2">Quality Service</h4>
-            <p className="text-gray-700 text-justify">
-              We pride ourselves on delivering high-quality services tailored to each client's unique needs and goals, ensuring maximum impact and ROI.
-            </p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg text-center min-w-[90vw] max-w-xs mx-auto md:min-w-0 md:max-w-none snap-center">
-            <div className="w-12 h-12 bg-[#599d39]/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-              <TrendingUp className="text-[#599d39]" />
-            </div>
-            <h4 className="text-xl font-bold text-black mb-2">Proven Results</h4>
-            <p className="text-gray-700 text-justify">
-              Our data-driven approach has helped our clients achieve significant growth in their online presence, engagement, and conversion rates.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
