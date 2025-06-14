@@ -1,7 +1,20 @@
 import { ArrowRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import heroImage from '../assets/images/orang.png';
 
 const Hero = () => {
+  const [scale, setScale] = useState(1.4);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const newScale = Math.min(4.8, 1.4 + (scrollY / 300) * 0.4);
+      setScale(newScale);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-black text-white">
       <div className="container mx-auto px-4">
@@ -16,10 +29,10 @@ const Hero = () => {
               <img
                 src={heroImage}
                 alt="Logo 3Our"
-                className="w-72 md:w-[22rem] h-auto animate-spin-slow relative"
+                className="w-72 md:w-[22rem] h-auto relative transition-transform duration-300"
                 style={{
-                  '--scale': '1.4',
-                } as React.CSSProperties}
+                  transform: `scale(${scale})`,
+                }}
               />
             </div>
             <p className="text-lg text-gray-300 mb-8 text-center">
