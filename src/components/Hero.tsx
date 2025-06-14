@@ -32,6 +32,7 @@ const Hero = () => {
                 className="w-72 md:w-[22rem] h-auto relative transition-transform duration-300"
                 style={{
                   transform: `scale(${scale})`,
+                  maxWidth: '100vw',
                 }}
               />
             </div>
