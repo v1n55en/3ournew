@@ -15,8 +15,11 @@ const Hero = () => {
               <div className="w-56 h-56 md:w-72 md:h-72 bg-white rounded-full opacity-10 absolute -bottom-4 -right-4"></div>
               <img
                 src={heroImage}
-                alt="People Pointing"
-                className="w-72 md:w-[22rem] h-auto animate-float relative"
+                alt="Logo 3Our"
+                className="w-72 md:w-[22rem] h-auto animate-spin-slow relative"
+                style={{
+                  '--scale': '1.4',
+                } as React.CSSProperties}
               />
             </div>
             <p className="text-lg text-gray-300 mb-8 text-center">
@@ -46,7 +49,10 @@ const Hero = () => {
                 <img
                   src={heroImage}
                   alt="People Pointing"
-                  className="w-72 md:w-[22rem] h-auto animate-float"
+                  className="w-72 md:w-[22rem] h-auto animate-spin-slow relative"
+                  style={{
+                    '--scale': '1.4',
+                  } as React.CSSProperties}
                 />
               </div>
             </div>
