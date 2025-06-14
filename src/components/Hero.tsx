@@ -26,15 +26,20 @@ const Hero = () => {
             <div className="relative z-10 flex items-center justify-center mb-6 md:hidden">
               <div className="w-56 h-56 md:w-72 md:h-72 bg-[#599d39] rounded-full opacity-20 absolute -top-4 -left-4"></div>
               <div className="w-56 h-56 md:w-72 md:h-72 bg-white rounded-full opacity-10 absolute -bottom-4 -right-4"></div>
-              <img
-                src={heroImage}
-                alt="Logo 3Our"
-                className="w-72 md:w-[22rem] h-auto relative transition-transform duration-300"
-                style={{
-                  transform: `scale(${scale})`,
-                  maxWidth: '100vw',
-                }}
-              />
+              <div className="relative w-full flex justify-center overflow-hidden" style={{ maxWidth: 400, margin: "0 auto" }}>
+                <img
+                  src={heroImage}
+                  alt="Logo 3Our"
+                  className="w-72 md:w-[22rem] h-auto transition-transform duration-300"
+                  style={{
+                    transform: `scale(${scale})`,
+                    maxWidth: "100%",
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                  }}
+                />
+              </div>
             </div>
             <p className="text-lg text-gray-300 mb-8 text-center">
               3Our Agency helps businesses grow their online presence through strategic social media into sales with digital marketing solutions.
