@@ -53,7 +53,7 @@ const Portfolio = () => {
       setCurrentSlide((prev) =>
         prev === portfolioSlides.length - 1 ? 0 : prev + 1
       );
-    }, 3000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [portfolioSlides.length]);
