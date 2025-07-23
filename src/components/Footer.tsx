@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <img src={logo} alt="3Our" className="h-10 mb-4" />
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-400 mb-6 text-left">
               Elevating your social media presence with strategic management, creative content, and result-driven solutions.
             </p>
             <div className="flex space-x-4">

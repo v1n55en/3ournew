@@ -1,38 +1,29 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import ServicePersonal from './components/ServicePersonal';
 import AboutUs from './components/AboutUs';
 import Portfolio from './components/Portfolio';
 import CallToAction from './components/CallToAction';
-import Contact from './components/Contacts';
+import Contacts from './components/Contacts';
 import Footer from './components/Footer';
-import SocialMediaAudit from './pages/SocialMediaAudit';
+import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen">
-        <Header />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <main>
-                <Hero />
-                <Services />
-                <AboutUs />
-                <Portfolio />
-                <CallToAction />
-                <Contact />
-              </main>
-            }
-          />
-          <Route path="/social-media-audit" element={<SocialMediaAudit />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <Hero />
+        <Services />
+        <ServicePersonal /> {/* tambahkan ini di bawah Services */}
+        <AboutUs />
+        <Portfolio />
+        <CallToAction />
+        <Contacts />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

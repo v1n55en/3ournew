@@ -5,7 +5,6 @@ interface PersonalCardProps {
   title: string;
   description: string;
   features: string[];
-  price: string;
   buttonLabel: string;
   isPopular?: boolean;
 }
@@ -14,7 +13,6 @@ const PersonalCard = ({
   title,
   description,
   features,
-  price,
   buttonLabel,
   isPopular = false,
 }: PersonalCardProps) => (
@@ -55,7 +53,7 @@ const PersonalCard = ({
       </ul>
     </div>
     <a
-      href="#personal-form"
+      href="#contact"
       className="w-full block text-center py-2 px-4 bg-[#599d39] hover:bg-[#4a8a2e] text-white font-medium rounded-lg transition-colors mt-6"
     >
       {buttonLabel}
@@ -141,37 +139,6 @@ const ServicePersonal = () => {
         {/* Tab Content */}
         <div>
           <PersonalCard {...personalServices[tabIndex]} />
-        </div>
-
-        {/* Formulir di bawah sini */}
-        <div id="personal-form" className="mt-12">
-          <h3 className="text-xl font-bold mb-4 text-center">
-            Personal Service Form
-          </h3>
-          {/* <PersonalForm /> */}
-          <form className="space-y-4 max-w-md mx-auto">
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full border rounded px-4 py-2"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full border rounded px-4 py-2"
-            />
-            <textarea
-              placeholder="Tell us about your needs..."
-              className="w-full border rounded px-4 py-2"
-              rows={4}
-            />
-            <button
-              type="submit"
-              className="w-full px-6 py-3 bg-[#599d39] text-white font-semibold rounded-lg hover:bg-[#4a8a2e] transition-colors"
-            >
-              Submit
-            </button>
-          </form>
         </div>
       </div>
     </section>
