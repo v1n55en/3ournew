@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import heroImage from '../assets/images/orang.png';
 
@@ -36,7 +37,7 @@ const Hero = () => {
               />
             </div>
             <p className="text-lg text-gray-300 mb-8 text-center">
-              3Our Agency helps businesses grow their online presence through strategic social media into sales with digital marketing solutions.
+              3Our helps businesses grow their online presence through strategic social media into sales with digital marketing solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -45,12 +46,12 @@ const Hero = () => {
               >
                 Explore Services <ArrowRight className="ml-2" size={18} />
               </a>
-              <a 
-                href="#contact" 
+              <Link
+                to="/social-media-audit"
                 className="px-6 py-3 border border-[#599d39] text-[#599d39] font-medium rounded-lg hover:bg-[#599d39]/10 transition-colors flex items-center justify-center"
               >
-                Contact Us
-              </a>
+                Free Audit Social Media
+              </Link>
             </div>
           </div>
           {/* Hero image hanya di desktop */}

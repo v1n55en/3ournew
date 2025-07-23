@@ -25,7 +25,6 @@ const Header = ( ) => {
           <a href="#contact" className="text-white hover:text-[#599d39] font-medium transition-colors">Contact</a>
         </nav>
         
-        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -33,7 +32,6 @@ const Header = ( ) => {
         </div>
       </div>
       
-      {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-black shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
