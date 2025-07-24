@@ -16,7 +16,7 @@ function App() {
       <main>
         <Hero />
         <Services />
-        <ServicePersonal /> {/* tambahkan ini di bawah Services */}
+        <ServicePersonal />
         <AboutUs />
         <Portfolio />
         <CallToAction />
